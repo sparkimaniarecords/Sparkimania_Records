@@ -1,13 +1,435 @@
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('nav');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-menu?.addEventListener('click', () => {
-  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  nav.style.position = 'absolute';
-  nav.style.right = '6%';
-  nav.style.top = '65px';
-  nav.style.flexDirection = 'column';
-  nav.style.background = '#111';
-  nav.style.padding = '18px';
-  nav.style.border = '1px solid #292929';
-});
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 6%;
+
+  background: rgba(8, 8, 8, 0.94);
+  border-bottom: 1px solid #222;
+
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  font-size: 10px;
+  vertical-align: top;
+  margin-left: 3px;
+}
+
+.nav nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav nav a {
+  color: #cccccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav nav a:hover {
+  color: #ffffff;
+}
+
+.menu {
+  display: none;
+
+  background: none;
+  border: none;
+  color: white;
+
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 88vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 80px 8%;
+
+  background:
+    radial-gradient(circle at 80% 50%, #222 0%, #080808 45%);
+}
+
+.hero-copy {
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 9vw, 115px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #d6d6d6;
+}
+
+.intro {
+  color: #aaa;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 13px 22px;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border: 1px solid #ffffff;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: transparent;
+  color: white;
+}
+
+.secondary-button {
+  background: transparent;
+  color: white;
+}
+
+
+/* HERO MARK */
+
+.hero-mark {
+  width: 260px;
+  height: 260px;
+
+  border: 1px solid #333;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 100px;
+  font-weight: 900;
+
+  transform: rotate(-8deg);
+
+  background: #111;
+}
+
+.hero-mark span {
+  color: #ffffff;
+}
+
+.hero-mark strong {
+  color: #555;
+}
+
+
+/* SECTIONS */
+
+.section {
+  padding: 110px 8%;
+  border-top: 1px solid #1c1c1c;
+}
+
+.section-head {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.section-head p {
+  color: #999;
+}
+
+
+/* ARTIST CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.artist-card {
+  background: #111;
+  border: 1px solid #242424;
+  overflow: hidden;
+
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.artist-card:hover {
+  transform: translateY(-7px);
+  border-color: #555;
+}
+
+.portrait {
+  height: 330px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1b1b1b;
+
+  font-size: 70px;
+  font-weight: 900;
+  color: #444;
+}
+
+.card-body {
+  padding: 28px;
+}
+
+.role {
+  color: #777;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.card-body h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card-body p:not(.role) {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+
+/* MUSIC */
+
+.dark-section {
+  background: #101010;
+}
+
+.tracks {
+  max-width: 850px;
+  border-top: 1px solid #333;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid #333;
+}
+
+.track span {
+  color: #666;
+  font-size: 13px;
+}
+
+.track b {
+  font-size: 17px;
+}
+
+
+/* ABOUT */
+
+.about {
+  max-width: 1100px;
+}
+
+.about > p:not(.eyebrow):not(.highlight) {
+  max-width: 700px;
+  color: #aaa;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+/* CONTACT */
+
+.contact {
+  background: #111;
+}
+
+.contact > p:not(.eyebrow) {
+  max-width: 600px;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding: 35px 8%;
+
+  border-top: 1px solid #222;
+
+  color: #777;
+  font-size: 12px;
+}
+
+footer strong {
+  color: #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .nav {
+    padding: 18px 6%;
+  }
+
+  .nav nav {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 20px 6%;
+
+    background: #0b0b0b;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav nav.active {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .hero {
+    min-height: 80vh;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero-mark {
+    width: 130px;
+    height: 130px;
+
+    margin-top: 60px;
+
+    font-size: 50px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    height: 360px;
+  }
+
+  .section {
+    padding: 80px 6%;
+  }
+
+  footer {
+    padding: 30px 6%;
+    flex-direction: column;
+  }
+    }
