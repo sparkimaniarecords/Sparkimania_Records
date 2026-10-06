@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sparkimania Records | More Life. More Spark.</title>
-  <meta
-    name="description"
-    content="Sparkimania Records — an independent Nigerian music label built around artists, energy and authentic African sound."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Sparkimania Records | More Life. More Spark.</title>  <meta name="description" content="Sparkimania Records — More Life. More Spark. An independent Nigerian music label.">  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  <style>
     :root {
-      --bg: #0a0a0f;
-      --bg-soft: #10131a;
-      --panel: rgba(255, 255, 255, 0.04);
-      --panel-strong: rgba(255, 255, 255, 0.08);
-      --text: #f4f4f5;
-      --text-muted: #b7bdc7;
-      --gold: #d8b36c;
-      --gold-soft: #f5d895;
-      --line: rgba(255, 255, 255, 0.12);
-      --shadow: 0 20px 45px rgba(0,0,0,0.35);
+      --black: #080808;
+      --dark: #101010;
+      --gold: #d8ad55;
+      --gold-light: #f2d58a;
+      --white: #ffffff;
+      --gray: #a8a8a8;
+      --line: rgba(255,255,255,.12);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -37,455 +26,717 @@
 
     body {
       font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(216, 179, 108, 0.10), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 20%),
-        var(--bg);
-      color: var(--text);
+      background: var(--black);
+      color: var(--white);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: min(1200px, calc(100% - 32px));
-      margin: 0 auto;
+      width: min(1150px, calc(100% - 32px));
+      margin: auto;
     }
 
-    .topbar {
+    /* NAVIGATION */
+
+    header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(10, 10, 15, 0.75);
+      z-index: 100;
+      background: rgba(8,8,8,.9);
+      backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--line);
     }
 
-    .nav {
+    nav {
+      min-height: 75px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 78px;
-      width: min(1200px, calc(100% - 32px));
-      margin: 0 auto;
-      gap: 24px;
+      gap: 20px;
     }
 
-    .brand {
+    .logo-text {
       font-weight: 900;
-      letter-spacing: 0.12em;
-      font-size: 0.96rem;
-      color: var(--text);
+      letter-spacing: .08em;
+      font-size: 18px;
     }
 
-    .brand span {
+    .logo-text span {
       color: var(--gold);
     }
 
     .nav-links {
       display: flex;
+      gap: 25px;
       align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
+      color: var(--gray);
+      font-size: 13px;
+      font-weight: 600;
       text-transform: uppercase;
-      transition: 0.25s ease;
+      letter-spacing: .08em;
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      color: var(--gold-light);
     }
 
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .contact-btn {
       border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: 0.25s ease;
+      color: var(--gold-light);
+      padding: 10px 17px;
+      border-radius: 30px;
     }
 
-    .nav-cta:hover {
-      background: var(--gold);
-      color: #111;
-    }
+    /* HERO */
 
     .hero {
-      padding: 70px 0 48px;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      min-height: 720px;
+      display: flex;
       align-items: center;
-      gap: 42px;
+      background:
+        radial-gradient(circle at 75% 40%, rgba(216,173,85,.16), transparent 30%),
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.05), transparent 25%),
+        var(--black);
     }
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.76rem;
-      line-height: 1;
-      letter-spacing: 0.22em;
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .small-title {
+      color: var(--gold-light);
       text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 18px;
-      font-weight: 700;
+      letter-spacing: .25em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: clamp(2.9rem, 6vw, 6rem);
-      line-height: 0.93;
-      letter-spacing: -0.07em;
-      margin-bottom: 18px;
+      font-size: clamp(55px, 9vw, 110px);
+      line-height: .9;
+      letter-spacing: -.08em;
       font-weight: 900;
-    }
-
-    h1 .light {
-      color: var(--gold-soft);
-      display: inline-block;
-    }
-
-    .intro {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 560px;
       margin-bottom: 28px;
     }
 
-    .hero-buttons {
+    h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero-text {
+      max-width: 620px;
+      color: var(--gray);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
       display: flex;
-      align-items: center;
-      gap: 16px;
       flex-wrap: wrap;
+      gap: 14px;
     }
 
     .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 999px;
+      padding: 14px 22px;
+      border-radius: 30px;
       font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-      transition: 0.25s ease;
+      font-size: 14px;
+      display: inline-block;
     }
 
-    .button.primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-      color: #141414;
-      box-shadow: var(--shadow);
+    .button-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #111;
     }
 
-    .button.primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 30px rgba(216, 179, 108, 0.22);
-    }
-
-    .button.secondary {
+    .button-outline {
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--text);
+      color: white;
     }
 
-    .button.secondary:hover {
-      border-color: rgba(255, 255, 255, 0.2);
-      background: rgba(255,255,255,0.04);
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
     }
 
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 500px;
-      position: relative;
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
     }
 
-    .brand-mark {
-      position: relative;
-      width: min(440px, 100%);
-      aspect-ratio: 1 / 1;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background:
-        linear-gradient(135deg, rgba(216, 179, 108, 0.12), rgba(255,255,255,0.02)),
-        rgba(255,255,255,0.02);
-      box-shadow: var(--shadow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .brand-mark::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-    }
-
-    .brand-mark .s {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: clamp(7rem, 16vw, 15rem);
-      font-weight: 900;
-      letter-spacing: -0.12em;
-      color: rgba(255,255,255,0.12);
+    .section-title {
+      font-size: clamp(38px, 6vw, 65px);
       line-height: 1;
-    }
-
-    .brand-mark .r {
-      position: relative;
-      font-size: clamp(5rem, 10vw, 9rem);
-      font-weight: 900;
-      letter-spacing: -0.08em;
-      color: var(--gold-soft);
-      text-shadow: 0 0 20px rgba(216, 179, 108, 0.22);
-    }
-
-    .section {
-      padding: 82px 0;
-    }
-
-    .section-head {
-      margin-bottom: 34px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      letter-spacing: -0.06em;
-      margin-bottom: 8px;
-      line-height: 1;
-    }
-
-    .section-head p {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-      max-width: 700px;
-    }
-
-    .artist-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .artist-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      overflow: hidden;
-      transition: 0.25s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .artist-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(216,179,108,0.5);
-    }
-
-    .portrait {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 220px;
-      background:
-        linear-gradient(135deg, rgba(216,179,108,0.18), rgba(255,255,255,0.02)),
-        #11151c;
-      font-size: clamp(2.4rem, 4vw, 4rem);
-      font-weight: 900;
-      letter-spacing: -0.08em;
-      color: var(--gold-soft);
-    }
-
-    .card-body {
-      padding: 22px 22px 24px;
-    }
-
-    .role {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-
-    .artist-card h3 {
-      font-size: 1.7rem;
-      letter-spacing: -0.05em;
+      letter-spacing: -.06em;
       margin-bottom: 12px;
     }
 
-    .artist-card p {
-      color: var(--text-muted);
-      margin-bottom: 18px;
+    .section-subtitle {
+      color: var(--gray);
+      max-width: 650px;
+      margin-bottom: 40px;
     }
 
-    .card-link {
-      color: var(--text);
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
+    /* ARTISTS */
 
-    .card-link:hover {
-      color: var(--gold-soft);
-    }
-
-    .dark-section {
-      background: rgba(255,255,255,0.02);
+    .artists {
+      background: #0c0c0c;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .tracks {
+    .artist-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .track {
+    .artist-card {
+      background: #111;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(216,173,85,.6);
+    }
+
+    .artist-image {
+      height: 330px;
+      background: linear-gradient(135deg, #252525, #101010);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .artist-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .placeholder {
+      font-size: 65px;
+      font-weight: 900;
+      color: rgba(255,255,255,.12);
+    }
+
+    .artist-info {
+      padding: 22px;
+    }
+
+    .artist-role {
+      color: var(--gold-light);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .artist-name {
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .artist-description {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* RELEASES */
+
+    .release-list {
+      display: grid;
+      gap: 15px;
+      max-width: 850px;
+    }
+
+    .release {
       display: flex;
       align-items: center;
       gap: 18px;
-      background: rgba(255,255,255,0.02);
+      padding: 20px;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 20px 22px;
-      transition: 0.25s ease;
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
     }
 
-    .track:hover {
-      border-color: rgba(216,179,108,0.5);
-      transform: translateY(-2px);
-    }
-
-    .track-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .release-number {
       width: 42px;
       height: 42px;
       border-radius: 50%;
-      background: rgba(216,179,108,0.12);
-      color: var(--gold-soft);
-      font-size: 0.8rem;
+      background: rgba(216,173,85,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .release-name {
       font-weight: 700;
     }
 
-    .track b {
-      font-size: 1.06rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    .release-artists {
+      color: var(--gray);
+      font-size: 13px;
     }
 
-    .about-block {
-      max-width: 820px;
+    /* ABOUT */
+
+    .about {
+      background: #0c0c0c;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .about-block h2 {
+    .about-content {
+      max-width: 800px;
+    }
+
+    .about-content p {
+      color: var(--gray);
+      font-size: 17px;
       margin-bottom: 18px;
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      letter-spacing: -0.06em;
-      line-height: 1;
     }
 
-    .about-block p {
-      color: var(--text-muted);
-      margin-bottom: 14px;
-      font-size: 1.04rem;
+    .slogan {
+      color: var(--gold-light) !important;
+      font-size: 22px !important;
+      font-weight: 800;
+      margin-top: 25px;
     }
 
-    .highlight {
-      margin-top: 20px;
-      font-size: 1.4rem;
-      color: var(--gold-soft);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
+    /* CONTACT */
 
     .contact-box {
-      background: linear-gradient(135deg, rgba(216,179,108,0.08), rgba(255,255,255,0.02));
       border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 32px 28px;
-    }
-
-    .contact-box h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: -0.06em;
-      margin-bottom: 14px;
+      border-radius: 25px;
+      padding: 40px;
+      background:
+        radial-gradient(circle at top right, rgba(216,173,85,.13), transparent 35%),
+        #111;
     }
 
     .contact-box p {
-      color: var(--text-muted);
-      margin-bottom: 22px;
-      max-width: 700px;
+      color: var(--gray);
+      max-width: 650px;
+      margin: 15px 0 25px;
     }
 
+    /* FOOTER */
+
     footer {
+      padding: 35px 0;
       border-top: 1px solid var(--line);
-      padding: 30px 0 48px;
-      background: rgba(255,255,255,0.01);
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
     }
 
-    .footer-brand {
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      font-size: 0.82rem;
-    }
-
     .footer-copy {
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      color: var(--gray);
+      font-size: 13px;
     }
 
-    @media (max-width: 900px) {
-      .hero-inner,
-      .artist-grid,
-      .tracks {
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .artist-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-inner {
-        display: block;
+      .artist-image {
+        height: 390px;
       }
 
-      .hero-visual {
-        margin-top: 28px;
+      .contact-box {
+        padding: 28px 22px;
       }
+    }
+  </style></head><body>  <!-- NAVIGATION -->  <header>
+    <nav class="container">  <a href="#" class="logo-text">
+    SPARKIMANIA <span>RECORDS</span>
+  </a>
 
-      .nav {
-        flex-wrap: wrap;
-        padding: 14px 0;
-      }
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#artists">Artists</a>
+    <a href="#releases">Releases</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="contact-btn">Contact</a>
+  </div>
 
-      .nav-links {
+</nav>
+
+  </header>  <!-- HERO -->  <main id="home"><section class="hero">
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Independent Nigerian Music Label
+      </div>
+
+      <h1>
+        MORE LIFE.<br>
+        <span>MORE SPARK.</span>
+      </h1>
+
+      <p class="hero-text">
+        Sparkimania Records is a Nigerian music label built around
+        creativity, culture, energy and the next generation of African sound.
+      </p>
+
+      <div class="buttons">
+        <a href="#artists" class="button button-gold">
+          Meet The Artists
+        </a>
+
+        <a href="#releases" class="button button-outline">
+          Explore Releases
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ARTISTS -->
+
+<section class="artists" id="artists">
+
+  <div class="container">
+
+    <h2 class="section-title">Our Artists</h2>
+
+    <p class="section-subtitle">
+      The people behind the sound, energy and movement of Sparkimania Records.
+    </p>
+
+    <div class="artist-grid">
+
+
+      <!-- JAYCOB SPARK -->
+
+      <article class="artist-card">
+
+        <div class="artist-image">
+          <div class="placeholder">JS</div>
+        </div>
+
+        <div class="artist-info">
+
+          <div class="artist-role">
+            Founder • Artist • Producer
+          </div>
+
+          <h3 class="artist-name">
+            Jaycob Spark
+          </h3>
+
+          <p class="artist-description">
+            Founder of Sparkimania Records and an Afrobeats artist and producer
+            bringing his own energy to the movement.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- BUZZYDY -->
+
+      <article class="artist-card">
+
+        <div class="artist-image">
+          <div class="placeholder">BD</div>
+        </div>
+
+        <div class="artist-info">
+
+          <div class="artist-role">
+            Artist
+          </div>
+
+          <h3 class="artist-name">
+            BuzzyDY
+          </h3>
+
+          <p class="artist-description">
+            Artist bringing his own sound and energy to the Sparkimania family.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- JAZZY BII -->
+
+      <article class="artist-card">
+
+        <div class="artist-image">
+          <div class="placeholder">JB</div>
+        </div>
+
+        <div class="artist-info">
+
+          <div class="artist-role">
+            Artist • Co-Label
+          </div>
+
+          <h3 class="artist-name">
+            Jazzy Bii
+          </h3>
+
+          <p class="artist-description">
+            Artist and creative partner connected with JB Records and
+            Sparkimania Records.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SCOPE SOUNDZZ -->
+
+      <article class="artist-card">
+
+        <div class="artist-image">
+          <div class="placeholder">SS</div>
+        </div>
+
+        <div class="artist-info">
+
+          <div class="artist-role">
+            Producer
+          </div>
+
+          <h3 class="artist-name">
+            Scope Soundzz
+          </h3>
+
+          <p class="artist-description">
+            Producer shaping the sound and creative direction behind the scenes.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- DEJAY MJ -->
+
+      <article class="artist-card">
+
+        <div class="artist-image">
+          <div class="placeholder">DM</div>
+        </div>
+
+        <div class="artist-info">
+
+          <div class="artist-role">
+            Official DJ
+          </div>
+
+          <h3 class="artist-name">
+            Dejay MJ
+          </h3>
+
+          <p class="artist-description">
+            Official DJ bringing the Sparkimania energy to the people.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RELEASES -->
+
+<section id="releases">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Latest Releases
+    </h2>
+
+    <p class="section-subtitle">
+      Music from the Sparkimania Records movement.
+    </p>
+
+    <div class="release-list">
+
+      <div class="release">
+        <div class="release-number">01</div>
+        <div>
+          <div class="release-name">
+            M. L. M. S (Sparkimania)
+          </div>
+          <div class="release-artists">
+            Sparkimanias & Jaycob Spark
+          </div>
+        </div>
+      </div>
+
+      <div class="release">
+        <div class="release-number">02</div>
+        <div>
+          <div class="release-name">
+            Jojo (Dance)
+          </div>
+          <div class="release-artists">
+            Sparkimanias & Jaycob Spark
+          </div>
+        </div>
+      </div>
+
+      <div class="release">
+        <div class="release-number">03</div>
+        <div>
+          <div class="release-name">
+            Every Night
+          </div>
+          <div class="release-artists">
+            Sparkimanias, Jaycob Spark & Jazzy Bii
+          </div>
+        </div>
+      </div>
+
+      <div class="release">
+        <div class="release-number">04</div>
+        <div>
+          <div class="release-name">
+            Young Me
+          </div>
+          <div class="release-artists">
+            Sparkimanias & Jaycob Spark
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-content">
+
+      <h2 class="section-title">
+        About Sparkimania
+      </h2>
+
+      <p>
+        Sparkimania Records is an independent Nigerian music label focused
+        on developing artists, creating music and building a movement around
+        African creativity.
+      </p>
+
+      <p>
+        From artists and producers to DJs and creatives, Sparkimania is
+        building a home for new energy and new sounds.
+      </p>
+
+      <p class="slogan">
+        More Life. More Spark.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <h2 class="section-title">
+        Let's Connect.
+      </h2>
+
+      <p>
+        For music, collaborations, business enquiries and other
+        Sparkimania Records opportunities, get in touch with the team.
+      </p>
+
+      <a href="mailto:sparkimaniarecords@gmail.com"
+         class="button button-gold">
+        Contact Sparkimania
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+  </main>  <!-- FOOTER -->  <footer><div class="container footer-inner">
+
+  <div class="logo-text">
+    SPARKIMANIA <span>RECORDS</span>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Sparkimania Records. All rights reserved.
+  </div>
+
+</div>
+
+  </footer></body>
+  </html>
